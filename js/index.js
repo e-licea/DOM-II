@@ -15,15 +15,45 @@ funBanner.addEventListener("mouseleave", (event) => {
 
 }
 
-//Mouse Over Event Listener
-let funBanner = document.querySelector('.intro img')
+//Enlarge -- Mouse Over
 
-funBanner.addEventListener("mouseover", () => {
-  funBanner.style.transform = "scale(1.05)"
-  funBanner.style.transition = "all 0.3s"
-})
 
-mLeave(funBanner);
+let enlarge = function(event){
+
+    event.addEventListener("mouseover", () => {
+    event.style.transform = "scale(1.05)"
+    event.style.transition = "all 0.3s"
+    })
+}
+
+//Keydown Function
+
+let colorCycle = function(event){
+
+addEventListener("keydown", function(event) {
+    if (event.target.keyCode == 86)
+      document.target.body.style.color = "violet";
+  });
+  addEventListener("keyup", function(event) {
+    if (event.keyCode == 86)
+      document.body.style.color = "";
+  });
+
+}
+
+//Variables
+
+let funBanner = document.querySelector('.intro img');
+let navAnchorz = document.querySelectorAll('.nav a');
+
 
 //Keydown Event Listener
 
+
+
+
+
+//
+enlarge(funBanner);
+mLeave(funBanner);
+colorCycle(navAnchorz);
